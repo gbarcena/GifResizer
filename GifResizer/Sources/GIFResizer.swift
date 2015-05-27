@@ -8,14 +8,14 @@ import UIKit
 import ImageIO
 import MobileCoreServices
 
-class GIFResizer: NSObject {
-    class func calculateBestNewWidth(#oldWidth:Int, oldSizeInBytes:Int, maxSizeInBytes:Int) -> Double
+public class GIFResizer: NSObject {
+    public class func calculateBestNewWidth(#oldWidth:Int, oldSizeInBytes:Int, maxSizeInBytes:Int) -> Double
     {
         var ratioDiff = Double(maxSizeInBytes)/Double(oldSizeInBytes)
         return Double(oldWidth) * ( ratioDiff + ((1-ratioDiff)/3))
     }
     
-    class func resizeGIF(data:NSData, fileURL:NSURL, maxEdgeSize:Double) -> Bool
+    public class func resizeGIF(data:NSData, fileURL:NSURL, maxEdgeSize:Double) -> Bool
     {
         var options = [kCGImageSourceShouldCache as String:false,
             kCGImageSourceTypeIdentifierHint as String:kUTTypeGIF]

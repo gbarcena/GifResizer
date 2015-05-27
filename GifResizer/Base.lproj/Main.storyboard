@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GifResizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Go-Qq-wpO" customClass="YLImageView">
+                                <rect key="frame" x="238" y="20" width="124" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="9zj-0t-7RN"/>
+                                    <constraint firstAttribute="height" constant="300" id="DVt-8i-3X8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oz-o2-0aq">
+                                <rect key="frame" x="187" y="328" width="226" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="PRT-FW-ACI"/>
+                                    <constraint firstAttribute="height" constant="21" id="cdE-0S-X9u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="0Go-Qq-wpO" secondAttribute="centerX" id="Bpc-hW-78K"/>
+                            <constraint firstItem="0Oz-o2-0aq" firstAttribute="top" secondItem="0Go-Qq-wpO" secondAttribute="bottom" constant="8" id="gEn-CY-yKj"/>
+                            <constraint firstAttribute="centerX" secondItem="0Oz-o2-0aq" secondAttribute="centerX" id="trU-Bl-RiV"/>
+                            <constraint firstItem="0Go-Qq-wpO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="w5l-dh-eBb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="0Go-Qq-wpO" id="3zn-Zl-nqq"/>
+                        <outlet property="label" destination="0Oz-o2-0aq" id="gq5-t4-aRF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

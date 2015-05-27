@@ -1,0 +1,13 @@
+PODS:
+  - GifWriter (1.0.0)
+  - YLGIFImage (0.11)
+
+DEPENDENCIES:
+  - GIFWriter (~> 1.0)
+  - YLGIFImage (~> 0.11)
+
+SPEC CHECKSUMS:
+  GifWriter: 4d5298911652b0801312cda669d516ac079d94ff
+  YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
+
+COCOAPODS: 0.36.4

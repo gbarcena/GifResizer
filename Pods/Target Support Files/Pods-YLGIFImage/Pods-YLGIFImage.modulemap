@@ -1,0 +1,6 @@
+framework module YLGIFImage {
+  umbrella header "Pods-YLGIFImage-umbrella.h"
+
+  export *
+  module * { export * }
+}

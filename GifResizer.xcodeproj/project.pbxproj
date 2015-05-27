@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D89E1C00CCF4884793290F9 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F99F22400C0409B83C15639 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EC36F5D01B1617B1007DC1B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC36F5CF1B1617B1007DC1B0 /* AppDelegate.swift */; };
+		EC36F5D21B1617B1007DC1B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC36F5D11B1617B1007DC1B0 /* ViewController.swift */; };
+		EC36F5D51B1617B1007DC1B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC36F5D31B1617B1007DC1B0 /* Main.storyboard */; };
+		EC36F5D71B1617B1007DC1B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC36F5D61B1617B1007DC1B0 /* Images.xcassets */; };
+		EC36F5DA1B1617B1007DC1B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC36F5D81B1617B1007DC1B0 /* LaunchScreen.xib */; };
+		EC36F5E61B1617B1007DC1B0 /* GifResizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC36F5E51B1617B1007DC1B0 /* GifResizerTests.swift */; };
+		EC36F5F11B161879007DC1B0 /* GIFResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC36F5F01B161879007DC1B0 /* GIFResizer.swift */; };
+		EC36F5FA1B161904007DC1B0 /* ninenine_1.png in Resources */ = {isa = PBXBuildFile; fileRef = EC36F5F31B161904007DC1B0 /* ninenine_1.png */; };
+		EC36F5FB1B161904007DC1B0 /* ninenine_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EC36F5F41B161904007DC1B0 /* ninenine_2.png */; };
+		EC36F5FC1B161904007DC1B0 /* ninenine_3.png in Resources */ = {isa = PBXBuildFile; fileRef = EC36F5F51B161904007DC1B0 /* ninenine_3.png */; };
+		EC36F5FD1B161904007DC1B0 /* ninenine_4.png in Resources */ = {isa = PBXBuildFile; fileRef = EC36F5F61B161904007DC1B0 /* ninenine_4.png */; };
+		EC36F5FE1B161904007DC1B0 /* ninenine_5.png in Resources */ = {isa = PBXBuildFile; fileRef = EC36F5F71B161904007DC1B0 /* ninenine_5.png */; };
+		EC36F5FF1B161904007DC1B0 /* ninenine_6.png in Resources */ = {isa = PBXBuildFile; fileRef = EC36F5F81B161904007DC1B0 /* ninenine_6.png */; };
+		EC36F6001B161904007DC1B0 /* ninenine_7.png in Resources */ = {isa = PBXBuildFile; fileRef = EC36F5F91B161904007DC1B0 /* ninenine_7.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC36F5E01B1617B1007DC1B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC36F5C21B1617B1007DC1B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC36F5C91B1617B1007DC1B0;
+			remoteInfo = GifResizer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F99F22400C0409B83C15639 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BB8448E764FB691AD6D7E45 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9098DD84CF12FCE1981392F9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EC36F5CA1B1617B1007DC1B0 /* GifResizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GifResizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC36F5CE1B1617B1007DC1B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC36F5CF1B1617B1007DC1B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC36F5D11B1617B1007DC1B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC36F5D41B1617B1007DC1B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC36F5D61B1617B1007DC1B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EC36F5D91B1617B1007DC1B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EC36F5DF1B1617B1007DC1B0 /* GifResizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifResizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC36F5E41B1617B1007DC1B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC36F5E51B1617B1007DC1B0 /* GifResizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifResizerTests.swift; sourceTree = "<group>"; };
+		EC36F5F01B161879007DC1B0 /* GIFResizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFResizer.swift; sourceTree = "<group>"; };
+		EC36F5F31B161904007DC1B0 /* ninenine_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ninenine_1.png; sourceTree = "<group>"; };
+		EC36F5F41B161904007DC1B0 /* ninenine_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ninenine_2.png; sourceTree = "<group>"; };
+		EC36F5F51B161904007DC1B0 /* ninenine_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ninenine_3.png; sourceTree = "<group>"; };
+		EC36F5F61B161904007DC1B0 /* ninenine_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ninenine_4.png; sourceTree = "<group>"; };
+		EC36F5F71B161904007DC1B0 /* ninenine_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ninenine_5.png; sourceTree = "<group>"; };
+		EC36F5F81B161904007DC1B0 /* ninenine_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ninenine_6.png; sourceTree = "<group>"; };
+		EC36F5F91B161904007DC1B0 /* ninenine_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ninenine_7.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC36F5C71B1617B1007DC1B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D89E1C00CCF4884793290F9 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC36F5DC1B1617B1007DC1B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79E820534426A0F316CA043B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F99F22400C0409B83C15639 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC36F5C11B1617B1007DC1B0 = {
+			isa = PBXGroup;
+			children = (
+				EC36F5CC1B1617B1007DC1B0 /* GifResizer */,
+				EC36F5E21B1617B1007DC1B0 /* GifResizerTests */,
+				EC36F5CB1B1617B1007DC1B0 /* Products */,
+				FFA083E5E36F70F26CC55F3E /* Pods */,
+				79E820534426A0F316CA043B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC36F5CB1B1617B1007DC1B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC36F5CA1B1617B1007DC1B0 /* GifResizer.app */,
+				EC36F5DF1B1617B1007DC1B0 /* GifResizerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC36F5CC1B1617B1007DC1B0 /* GifResizer */ = {
+			isa = PBXGroup;
+			children = (
+				EC36F5CF1B1617B1007DC1B0 /* AppDelegate.swift */,
+				EC36F5D61B1617B1007DC1B0 /* Images.xcassets */,
+				EC36F5D81B1617B1007DC1B0 /* LaunchScreen.xib */,
+				EC36F5D31B1617B1007DC1B0 /* Main.storyboard */,
+				EC36F5F21B161904007DC1B0 /* ninenine */,
+				EC36F5EF1B161879007DC1B0 /* Sources */,
+				EC36F5CD1B1617B1007DC1B0 /* Supporting Files */,
+				EC36F5D11B1617B1007DC1B0 /* ViewController.swift */,
+			);
+			path = GifResizer;
+			sourceTree = "<group>";
+		};
+		EC36F5CD1B1617B1007DC1B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC36F5CE1B1617B1007DC1B0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC36F5E21B1617B1007DC1B0 /* GifResizerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC36F5E51B1617B1007DC1B0 /* GifResizerTests.swift */,
+				EC36F5E31B1617B1007DC1B0 /* Supporting Files */,
+			);
+			path = GifResizerTests;
+			sourceTree = "<group>";
+		};
+		EC36F5E31B1617B1007DC1B0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC36F5E41B1617B1007DC1B0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC36F5EF1B161879007DC1B0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EC36F5F01B161879007DC1B0 /* GIFResizer.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		EC36F5F21B161904007DC1B0 /* ninenine */ = {
+			isa = PBXGroup;
+			children = (
+				EC36F5F31B161904007DC1B0 /* ninenine_1.png */,
+				EC36F5F41B161904007DC1B0 /* ninenine_2.png */,
+				EC36F5F51B161904007DC1B0 /* ninenine_3.png */,
+				EC36F5F61B161904007DC1B0 /* ninenine_4.png */,
+				EC36F5F71B161904007DC1B0 /* ninenine_5.png */,
+				EC36F5F81B161904007DC1B0 /* ninenine_6.png */,
+				EC36F5F91B161904007DC1B0 /* ninenine_7.png */,
+			);
+			path = ninenine;
+			sourceTree = "<group>";
+		};
+		FFA083E5E36F70F26CC55F3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9098DD84CF12FCE1981392F9 /* Pods.debug.xcconfig */,
+				4BB8448E764FB691AD6D7E45 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC36F5C91B1617B1007DC1B0 /* GifResizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC36F5E91B1617B1007DC1B0 /* Build configuration list for PBXNativeTarget "GifResizer" */;
+			buildPhases = (
+				03B6DF36E589A61CE43BCF90 /* Check Pods Manifest.lock */,
+				EC36F5C61B1617B1007DC1B0 /* Sources */,
+				EC36F5C71B1617B1007DC1B0 /* Frameworks */,
+				EC36F5C81B1617B1007DC1B0 /* Resources */,
+				B492B6030DE70B14BDFBD570 /* Embed Pods Frameworks */,
+				8627C8D9C8E82F96011A051F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GifResizer;
+			productName = GifResizer;
+			productReference = EC36F5CA1B1617B1007DC1B0 /* GifResizer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC36F5DE1B1617B1007DC1B0 /* GifResizerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC36F5EC1B1617B1007DC1B0 /* Build configuration list for PBXNativeTarget "GifResizerTests" */;
+			buildPhases = (
+				EC36F5DB1B1617B1007DC1B0 /* Sources */,
+				EC36F5DC1B1617B1007DC1B0 /* Frameworks */,
+				EC36F5DD1B1617B1007DC1B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC36F5E11B1617B1007DC1B0 /* PBXTargetDependency */,
+			);
+			name = GifResizerTests;
+			productName = GifResizerTests;
+			productReference = EC36F5DF1B1617B1007DC1B0 /* GifResizerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC36F5C21B1617B1007DC1B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Gustavo Barcena";
+				TargetAttributes = {
+					EC36F5C91B1617B1007DC1B0 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					EC36F5DE1B1617B1007DC1B0 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = EC36F5C91B1617B1007DC1B0;
+					};
+				};
+			};
+			buildConfigurationList = EC36F5C51B1617B1007DC1B0 /* Build configuration list for PBXProject "GifResizer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC36F5C11B1617B1007DC1B0;
+			productRefGroup = EC36F5CB1B1617B1007DC1B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC36F5C91B1617B1007DC1B0 /* GifResizer */,
+				EC36F5DE1B1617B1007DC1B0 /* GifResizerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC36F5C81B1617B1007DC1B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC36F5D51B1617B1007DC1B0 /* Main.storyboard in Resources */,
+				EC36F5FF1B161904007DC1B0 /* ninenine_6.png in Resources */,
+				EC36F5FE1B161904007DC1B0 /* ninenine_5.png in Resources */,
+				EC36F6001B161904007DC1B0 /* ninenine_7.png in Resources */,
+				EC36F5FC1B161904007DC1B0 /* ninenine_3.png in Resources */,
+				EC36F5FA1B161904007DC1B0 /* ninenine_1.png in Resources */,
+				EC36F5DA1B1617B1007DC1B0 /* LaunchScreen.xib in Resources */,
+				EC36F5FD1B161904007DC1B0 /* ninenine_4.png in Resources */,
+				EC36F5FB1B161904007DC1B0 /* ninenine_2.png in Resources */,
+				EC36F5D71B1617B1007DC1B0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC36F5DD1B1617B1007DC1B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03B6DF36E589A61CE43BCF90 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8627C8D9C8E82F96011A051F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B492B6030DE70B14BDFBD570 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC36F5C61B1617B1007DC1B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC36F5F11B161879007DC1B0 /* GIFResizer.swift in Sources */,
+				EC36F5D21B1617B1007DC1B0 /* ViewController.swift in Sources */,
+				EC36F5D01B1617B1007DC1B0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC36F5DB1B1617B1007DC1B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC36F5E61B1617B1007DC1B0 /* GifResizerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC36F5E11B1617B1007DC1B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC36F5C91B1617B1007DC1B0 /* GifResizer */;
+			targetProxy = EC36F5E01B1617B1007DC1B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC36F5D31B1617B1007DC1B0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC36F5D41B1617B1007DC1B0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC36F5D81B1617B1007DC1B0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC36F5D91B1617B1007DC1B0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC36F5E71B1617B1007DC1B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC36F5E81B1617B1007DC1B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC36F5EA1B1617B1007DC1B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9098DD84CF12FCE1981392F9 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GifResizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EC36F5EB1B1617B1007DC1B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BB8448E764FB691AD6D7E45 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GifResizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EC36F5ED1B1617B1007DC1B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GifResizerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GifResizer.app/GifResizer";
+			};
+			name = Debug;
+		};
+		EC36F5EE1B1617B1007DC1B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = GifResizerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GifResizer.app/GifResizer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC36F5C51B1617B1007DC1B0 /* Build configuration list for PBXProject "GifResizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC36F5E71B1617B1007DC1B0 /* Debug */,
+				EC36F5E81B1617B1007DC1B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC36F5E91B1617B1007DC1B0 /* Build configuration list for PBXNativeTarget "GifResizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC36F5EA1B1617B1007DC1B0 /* Debug */,
+				EC36F5EB1B1617B1007DC1B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC36F5EC1B1617B1007DC1B0 /* Build configuration list for PBXNativeTarget "GifResizerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC36F5ED1B1617B1007DC1B0 /* Debug */,
+				EC36F5EE1B1617B1007DC1B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC36F5C21B1617B1007DC1B0 /* Project object */;
+}

@@ -113,7 +113,7 @@
 				EC36F5D81B1617B1007DC1B0 /* LaunchScreen.xib */,
 				EC36F5D31B1617B1007DC1B0 /* Main.storyboard */,
 				EC36F5F21B161904007DC1B0 /* ninenine */,
-				EC36F5EF1B161879007DC1B0 /* Sources */,
+				EC36F5EF1B161879007DC1B0 /* Source */,
 				EC36F5CD1B1617B1007DC1B0 /* Supporting Files */,
 				EC36F5D11B1617B1007DC1B0 /* ViewController.swift */,
 			);
@@ -145,12 +145,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EC36F5EF1B161879007DC1B0 /* Sources */ = {
+		EC36F5EF1B161879007DC1B0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				EC36F5F01B161879007DC1B0 /* GIFResizer.swift */,
 			);
-			path = Sources;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		EC36F5F21B161904007DC1B0 /* ninenine */ = {

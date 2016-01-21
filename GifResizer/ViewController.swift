@@ -23,7 +23,7 @@ func stringFromSize(size:CGSize?) -> String {
     return ""
 }
 
-class ViewController: UIViewController, GIFWriterDelegate {
+class ViewController: UIViewController {
     @IBOutlet weak var imageView : YLImageView!
     @IBOutlet weak var label : UILabel!
     
@@ -43,73 +43,61 @@ class ViewController: UIViewController, GIFWriterDelegate {
             }
         }
         let fileURL = self.dynamicType.fileLocation("ninenine.gif")
-        let gifWriter = GIFWriter(images: images)
-        gifWriter.delegate = self
+        guard let gifWriter = GIFWriter(images: images) else {
+            return
+        }
         gifWriter.makeGIF(fileURL)
         
-        if let data = NSData(contentsOfURL: fileURL) {
-            let gifImage = YLGIFImage(data: data)
-            runOnMainThread({ () -> () in
-                self.imageView.image = gifImage
-                self.label.text = "Created GIF \(stringFromSize(gifImage?.size))"
-            })
-            
-            NSThread.sleepForTimeInterval(1.0)
-
-            let maxSize = 300000
-            if let size = gifImage?.size {
-                println("Original Size: \(data.length)")
-                println("Original Width: \(size.width)")
-
-                let newWidth = GIFResizer.calculateBestNewWidth(oldWidth: Int(size.width),
-                    oldSizeInBytes: data.length,
-                    maxSizeInBytes: maxSize)
-                println("newWidth Width: \(newWidth)")
-                let maxEdgeSize : Double
-                if size.width >= size.height {
-                    maxEdgeSize = newWidth
-                }
-                else {
-                    maxEdgeSize = newWidth * Double(size.height / size.width)
-                }
-
-                let smallFileURL = self.dynamicType.fileLocation("ninenine-small.gif")
-                let success = GIFResizer.resizeGIF(data, fileURL: smallFileURL, maxEdgeSize: maxEdgeSize)
-                if (success) {
-                    if let data = NSData(contentsOfURL: smallFileURL) {
-                        let gifImage = YLGIFImage(data: data)
-                        runOnMainThread {
-                            self.imageView.image = gifImage
-                            self.label.text = "Resized GIF \(stringFromSize(gifImage?.size))"
-                        }
-                        println("Final Size: \(data.length)")
-                        println("Final Width: \(gifImage!.size.width)")
-                    }
-                }
-            }
-            
+        guard let
+            data = NSData(contentsOfURL: fileURL),
+            gifImage = YLGIFImage(data: data) else
+        {
+            return
         }
-    }
-    
-    func didStartWritingGIF(writer: GIFWriter) {
+        runOnMainThread({ () -> () in
+            self.imageView.image = gifImage
+            self.label.text = "Created GIF \(stringFromSize(gifImage.size))"
+        })
         
-    }
-    
-    func didEndWritingGIF(writer: GIFWriter) {
+        NSThread.sleepForTimeInterval(1.0)
         
-    }
-    
-    func didWriteImage(writer: GIFWriter, frameIndex: Int, frameCount: Int) {
+        let maxSize = 300000
+        let size = gifImage.size
+        print("Original Size: \(data.length)")
+        print("Original Width: \(size.width)")
+        
+        let newWidth = GIFResizer.calculateBestNewWidth(oldWidth: Int(size.width),
+            oldSizeInBytes: data.length,
+            maxSizeInBytes: maxSize)
+        print("newWidth Width: \(newWidth)")
+        
+        let maxEdgeSize: Double
+        if size.width >= size.height {
+            maxEdgeSize = newWidth
+        }
+        else {
+            maxEdgeSize = newWidth * Double(size.height / size.width)
+        }
+        
+        let smallFileURL = self.dynamicType.fileLocation("ninenine-small.gif")
+        let success = GIFResizer.resizeGIF(data, fileURL: smallFileURL, maxEdgeSize: maxEdgeSize)
+        if (success) {
+            if let data = NSData(contentsOfURL: smallFileURL) {
+                let gifImage = YLGIFImage(data: data)
+                runOnMainThread {
+                    self.imageView.image = gifImage
+                    self.label.text = "Resized GIF \(stringFromSize(gifImage?.size))"
+                }
+                print("Final Size: \(data.length)")
+                print("Final Width: \(gifImage!.size.width)")
+            }
+        }
         
     }
     
     class func fileLocation(fileName:String) -> NSURL {
-        let path = NSTemporaryDirectory()
-        let filePath = path.stringByAppendingPathComponent(fileName)
-        if let fileURL = NSURL(fileURLWithPath: filePath) {
-            return fileURL
-        }
-        assertionFailure("We need to create valid fileURL")
-        return NSURL()
+        let path = NSURL(fileURLWithPath: NSTemporaryDirectory())
+        let fileURL = path.URLByAppendingPathComponent(fileName)
+        return fileURL
     }
 }

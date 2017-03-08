@@ -10,13 +10,13 @@ import UIKit
 import GifWriter
 import YLGIFImage
 
-func runOnMainThread(block:()->()) {
-    dispatch_async(dispatch_get_main_queue()) {
+func runOnMainThread(_ block:@escaping ()->()) {
+    DispatchQueue.main.async {
         block()
     }
 }
 
-func stringFromSize(size:CGSize?) -> String {
+func stringFromSize(_ size:CGSize?) -> String {
     if let size = size {
         return "\(size.width)x\(size.height)"
     }
@@ -27,9 +27,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView : YLImageView!
     @IBOutlet weak var label : UILabel!
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
+        DispatchQueue.global(qos: .background).async {
             self.writeGIF()
         }
     }
@@ -42,15 +42,15 @@ class ViewController: UIViewController {
                 images.append(image)
             }
         }
-        let fileURL = self.dynamicType.fileLocation("ninenine.gif")
+        let fileURL = type(of: self).fileLocation("ninenine.gif")
         guard let gifWriter = GIFWriter(images: images) else {
             return
         }
         gifWriter.makeGIF(fileURL)
         
         guard let
-            data = NSData(contentsOfURL: fileURL),
-            gifImage = YLGIFImage(data: data) else
+            data = try? Data(contentsOf: fileURL),
+            let gifImage = YLGIFImage(data: data) else
         {
             return
         }
@@ -59,15 +59,15 @@ class ViewController: UIViewController {
             self.label.text = "Created GIF \(stringFromSize(gifImage.size))"
         })
         
-        NSThread.sleepForTimeInterval(1.0)
+        Thread.sleep(forTimeInterval: 1.0)
         
         let maxSize = 300000
         let size = gifImage.size
-        print("Original Size: \(data.length)")
+        print("Original Size: \(data.count)")
         print("Original Width: \(size.width)")
         
         let newWidth = GIFResizer.calculateBestNewWidth(oldWidth: Int(size.width),
-            oldSizeInBytes: data.length,
+            oldSizeInBytes: data.count,
             maxSizeInBytes: maxSize)
         print("newWidth Width: \(newWidth)")
         
@@ -79,25 +79,25 @@ class ViewController: UIViewController {
             maxEdgeSize = newWidth * Double(size.height / size.width)
         }
         
-        let smallFileURL = self.dynamicType.fileLocation("ninenine-small.gif")
+        let smallFileURL = type(of: self).fileLocation("ninenine-small.gif")
         let success = GIFResizer.resizeGIF(data, fileURL: smallFileURL, maxEdgeSize: maxEdgeSize)
         if (success) {
-            if let data = NSData(contentsOfURL: smallFileURL) {
+            if let data = try? Data(contentsOf: smallFileURL) {
                 let gifImage = YLGIFImage(data: data)
                 runOnMainThread {
                     self.imageView.image = gifImage
                     self.label.text = "Resized GIF \(stringFromSize(gifImage?.size))"
                 }
-                print("Final Size: \(data.length)")
+                print("Final Size: \(data.count)")
                 print("Final Width: \(gifImage!.size.width)")
             }
         }
         
     }
     
-    class func fileLocation(fileName:String) -> NSURL {
-        let path = NSURL(fileURLWithPath: NSTemporaryDirectory())
-        let fileURL = path.URLByAppendingPathComponent(fileName)
+    class func fileLocation(_ fileName:String) -> URL {
+        let path = URL(fileURLWithPath: NSTemporaryDirectory())
+        let fileURL = path.appendingPathComponent(fileName)
         return fileURL
     }
 }
